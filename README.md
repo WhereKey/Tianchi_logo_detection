@@ -1,3 +1,4 @@
+rank 12/2135
 ### round1 
 
 本场比赛中，可以注意到logo很小，并且分布很稀疏。因此需要采用大尺度以及多尺度训练。此外，考虑比赛所给的训练样本很少，因此需要大量的数据增强来扩充样本，包括mixup、copy-paste等。在后处理阶段，观察到每张图片只含有一个商品类别，利用这一特性去除错误的检测。
@@ -8,8 +9,9 @@ GPU : 双卡 A40
 + mixup
 + 后处理
 + 多尺度训练，大尺度训练
-+ AutoAugment v1、albumentation
++ AutoAugment v1/2、albumentation
 + 4conv1fc
++ copy-paste
 
 ##### 下表缩写说明
 aug = ShiftScaleRotate + RandomBrightnessContrast + RGBShift + HueSaturationValue
